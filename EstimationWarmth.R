@@ -32,13 +32,13 @@ nengage <- matrix(NA, nrow = individs, ncol = nstates)
 
 #fill matrices with counts for each individual and each state
 for(i in 1:individs){
-  engage[i, 1] <- count_action$sum_e((i - 1) * 3 + 1)
-  engage[i, 2] <- count_action$sum_e((i - 1) * 3 + 2)
-  engage[i, 3] <- count_action$sum_e((i - 1) * 3 + 3)
+  engage[i, 1] <- count_action$sum_e[(i - 1) * 3 + 1]
+  engage[i, 2] <- count_action$sum_e[(i - 1) * 3 + 2]
+  engage[i, 3] <- count_action$sum_e[(i - 1) * 3 + 3]
   
-  nengage[i, 1] <- count_action$sum_n((i - 1) * 3 + 1)
-  nengage[i, 2] <- count_action$sum_n((i - 1) * 3 + 2)
-  nengage[i, 3] <- count_action$sum_n((i - 1) * 3 + 3)
+  nengage[i, 1] <- count_action$sum_n[(i - 1) * 3 + 1]
+  nengage[i, 2] <- count_action$sum_n[(i - 1) * 3 + 2]
+  nengage[i, 3] <- count_action$sum_n[(i - 1) * 3 + 3]
 }
 
 
