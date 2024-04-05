@@ -19,7 +19,12 @@ count_action <- data %>%
 #arrange data by ID and states
 count_action <- count_action %>%
   arrange(ID, states)
-
+#calculates num of unique individuals and num of states
+individs <- length(unique(data$ID))
+nstates <- 3 # 3 states
+#initialize empty matrix for action counts of each individuals per state
+engage <- matrix(NA, nrow = individs, ncol = nstates)
+nengage <- matrix(NA, nrow = individs, ncol = nstates)
 
 
 
